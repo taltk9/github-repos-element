@@ -1,0 +1,25 @@
+{
+  "name": "github-repos-element",
+  "version": "0.0.1",
+  "description": "Web Component to list a github user's repos list.",
+  "authors": [
+    "@taltk9 [Thiago Alves]"
+  ],
+  "license": "MIT",
+  "main": "src/github-repos.html",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "github"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "platform": "~0.2.0",
+    "polymer-jsonp": "~0.2.0",
+    "polymer": "~0.2.0"
+  }
+}

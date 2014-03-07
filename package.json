@@ -1,0 +1,11 @@
+{
+  "name": "github-repos-element",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "git+https://github.com/bower/bower.git#master"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
