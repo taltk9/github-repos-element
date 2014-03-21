@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer-jsonp/polymer-jsonp.html">
+
+<polymer-element name="github-repos"  attributes="username">
+	<template>
+		<style>:host { display: block; }</style>
+		<section>
+			<a href="{{repos.data[0].owner.html_url}}" target="_blank">			
+				<img src="{{repos.data[0].owner.avatar_url}}">
+			</a>
+			<h1>
+				<a href="{{repos.data[0].owner.html_url}}" target="_blank">
+					GitHub {{repos.data[0].owner.login}}'s repositories
+				</a>
+			</h1>
+		</section>
+		<section>
+			<ul>
+				<template id="greeting" repeat="{{ repo in repos.data }}">
+					<li>
+						<h4>
+							<a href="{{repos.html_url}}" target="_blank">
+								{{ repo.name }}
+							</a>
+						</h4>
+						<p>{{ repo.name }}</p>
+					</li>
+				</template>
+			</ul>
+		</section>
+		<polymer-jsonp auto url="https://api.github.com/users/{{username}}/repos?callback=" response="{{repos}}"></polymer-jsonp>
+	</template>
+	<script>
+		Polymer('github-repos', {});
+	</script>
+</polymer-element>
