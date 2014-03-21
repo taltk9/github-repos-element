@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "platform": "~0.2.0",
-    "polymer-jsonp": "~0.2.0",
+    "polymer-jsonp": "git://github.com/Polymer/polymer-jsonp.git",
     "polymer": "~0.2.0"
   }
 }
